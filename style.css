@@ -7,8 +7,8 @@
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background-color: #fffaf5;
-  color: #333;
+  background-color: #000;   /* black background */
+  color: #fff;              /* white text for contrast */
   line-height: 1.6;
   padding: 20px;
 }
@@ -91,3 +91,4 @@ body {
   font-size: 1.2rem;
   color: #555;
 }
+
