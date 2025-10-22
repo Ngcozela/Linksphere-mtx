@@ -15,11 +15,12 @@ body {
 
 /* Section Titles */
 .section-title {
-  font-size: 2rem;
-  color: #222;
+  font-size: 2.8rem;      /* bigger heading */
+  color: #fff;            /* white text */
   text-align: center;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 700;       /* bolder font */
+  letter-spacing: 1px;    /* optional: adds a clean spaced look */
 }
 
 /* Collections Grid */
@@ -91,4 +92,5 @@ body {
   font-size: 1.2rem;
   color: #555;
 }
+
 
