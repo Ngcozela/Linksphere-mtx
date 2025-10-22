@@ -32,25 +32,41 @@ body {
 }
 
 .collection-tab {
-  background-color: #ccc;      /* light grey */
-  color: #000;                 /* dark text for contrast */
+  background-color: #ccc;          /* light grey */
+  color: #000;
   border-radius: 8px;
-  padding: 12px;               /* smaller size */
+  padding: 12px;
   text-align: center;
   font-size: 1rem;
-  font-weight: 700;            /* make text bold */
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;       /* smooth animation */
   position: relative;
   width: 100%;
-  max-width: 160px;            /* smaller tab width */
+  max-width: 160px;
   overflow: hidden;
+  transform: translateY(0);
 }
 
 .collection-tab:hover {
-  background-color: #aaa;      /* slightly darker grey on hover */
-  transform: translateY(-4px);
+  background-color: #ff7a00;       /* orange on hover */
+  transform: translateY(-8px) scale(1.05); /* lifts & grows slightly */
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5); /* glow effect */
 }
+
+/* Text styling */
+.collection-tab p {
+  position: relative;
+  z-index: 1;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.collection-tab:hover p {
+  font-style: italic;              /* italic title on hover */
+  color: #fff;                     /* white text when tab turns orange */
+}
+
 
 /* Hover Image */
 .collection-tab .hover-img {
