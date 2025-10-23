@@ -32,7 +32,7 @@ body {
 }
 
 .collection-tab {
-  background-color: #ccc;          /* light grey */
+  background-color: #cccccc0e;          /* light grey */
   color: #000;
   border-radius: 8px;
   padding: 12px;
@@ -68,7 +68,7 @@ body {
 
 .collection-tab:hover p {
   font-style: italic;              /* italic title on hover */
-  color: #ffffff3d;                     /* white text when tab turns orange */
+  color: #ffffff;                     /* white text when tab turns orange */
 }
 
 
@@ -89,26 +89,7 @@ body {
 .collection-tab:hover .hover-img {
   opacity: 1;
 }
-/* --- View Cover button below tab --- */
-.view-btn {
-  display: none; /* hidden by default */
-  background-color: #ff7a00;
-  border: none;
-  color: white;
-  padding: 6px 12px;          /* smaller button size */
-  font-size: 0.9rem;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 8px;            /* small space below tab */
-}
 
-/* When hovering over the tab, show the button */
-.collection-tab:hover + .view-btn {
-  display: inline-block;
-  animation: fadeIn 0.4s ease;
-}
 
 /* Hover effect for the button itself */
 .view-btn:hover {
