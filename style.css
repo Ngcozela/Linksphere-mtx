@@ -68,7 +68,7 @@ body {
 
 .collection-tab:hover p {
   font-style: italic;              /* italic title on hover */
-  color: #fff;                     /* white text when tab turns orange */
+  color: #ffffff3d;                     /* white text when tab turns orange */
 }
 
 
