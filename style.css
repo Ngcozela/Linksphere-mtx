@@ -49,10 +49,14 @@ body {
 }
 
 .collection-tab:hover {
-  background-color: #ff7a00;       /* orange on hover */
-  transform: translateY(-8px) scale(1.05); /* lifts & grows slightly */
-  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5); /* glow effect */
+  background-color: #ff7a00;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5);
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg, #ff7a00, #ffb347);
+  border-image-slice: 1;
 }
+
 
 /* Text styling */
 .collection-tab p {
