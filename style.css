@@ -49,10 +49,11 @@ body {
 }
 
 .collection-tab:hover {
-  background-color: #ff7a00;
+  background-color: #ff7b002d;
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5);
   border: 3px transparent;
+  border-image: linear-gradient(45deg, #ff7a00, #ffb347);
   border-image-slice: 1;
 }
 
