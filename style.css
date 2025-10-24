@@ -162,7 +162,7 @@ body {
 
 /* TITLE CONTAINER */
 .title-preview {
-  position: relative;
+  position: center;
   display: inline-block;
   text-align: center;
 }
