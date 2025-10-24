@@ -22,69 +22,6 @@ body {
   font-weight: 700;       /* bolder font */
   letter-spacing: 1px;    /* optional: adds a clean spaced look */
 }
-.title-preview {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-/* Center the entire title section at the top */
-.page-header {
-  position: relative;
-  width: 100%;
-  text-align: center;        /* centers the content horizontally */
-  margin-top: 20px;          /* small top spacing */
-}
-
-/* Optional: if you want it perfectly pinned to top */
-.page-header {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.page-title {
-  color: #fff;                /* white title */
-  font-size: 2.5rem;          /* large title */
-  font-weight: 700;           /* bold */
-  cursor: pointer;            /* shows hand icon when hovered */
-  transition: color 0.3s ease;
-}
-
-.page-title:hover {
-  color: #ff7a00;             /* orange highlight when hovered */
-}
-
-.title-image {
-  display: none;              /* hidden by default */
-  position: absolute;
-  top: 100%;                  /* below the title */
-  left: 50%;
-  transform: translateX(-50%) translateY(10px); /* centered, slightly below */
-  width: 250px;               /* preview size */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  animation: dropDown 0.4s ease forwards;
-  z-index: 10;
-}
-
-/* When hovering over the title container, show the image */
-.title-preview:hover .title-image {
-  display: block;
-}
-
-/* Optional: smooth drop animation */
-@keyframes dropDown {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(10px);
-  }
-}
 
 /* Collections Grid */
 .collection-grid {
@@ -171,6 +108,23 @@ body {
   opacity: 1;
 }
 
+/* Button styling */
+.view-btn {
+  background-color: #ff7a00;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #e06d00;
+  transform: scale(1.1);
+}
 
 .collection-tab p {
   position: relative;
