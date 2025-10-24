@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Choose Before Viewing</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       background-color: #000;
@@ -65,7 +64,6 @@
       font-weight: 600;
     }
 
-    /* Continue button */
     #continue-btn {
       display: none;
       margin-top: 40px;
@@ -87,24 +85,23 @@
 </head>
 <body>
   <h2>Choose Before Continuing</h2>
-  <p>You can visit one of the three sites below or watch a short 30-second video before continuing to the collection.</p>
+  <p>You must visit all three sites <strong>or</strong> watch the 30-second video before continuing to the collection.</p>
 
   <div class="options">
-    <a href="https://example1.com" target="_blank" class="option-btn site-link">Visit Site 1</a>
-    <a href="https://example2.com" target="_blank" class="option-btn site-link">Visit Site 2</a>
-    <a href="https://example3.com" target="_blank" class="option-btn site-link">Visit Site 3</a>
+    <a href="https://example1.com" target="_blank" class="option-btn site-link" data-site="1">Visit Site 1</a>
+    <a href="https://example2.com" target="_blank" class="option-btn site-link" data-site="2">Visit Site 2</a>
+    <a href="https://example3.com" target="_blank" class="option-btn site-link" data-site="3">Visit Site 3</a>
     <button id="watchVideoBtn" class="option-btn">Watch 30s Video</button>
   </div>
 
   <div class="video-container" id="videoContainer">
     <video id="sampleVideo" width="480" controls>
-      <source src="sample.mp4" type="video/mp4">
+      <source src="sample.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="timer" id="timer">Time remaining: 30s</div>
   </div>
 
-  <!-- 👇 This is the button that appears after the 30s or site visit -->
   <a href="https://mega.nz/folder/yfZ2AaoQ#zTF7PfZWA76b4xEXkzsOFw" target="_blank" id="continue-btn">Continue to Collection</a>
 
   <script>
@@ -115,19 +112,25 @@
     const continueBtn = document.getElementById('continue-btn');
     const siteLinks = document.querySelectorAll('.site-link');
 
+    let visitedSites = new Set();
     let countdown = 30;
     let timer;
+    let videoCompleted = false;
 
-    // If user clicks any site, show Continue immediately
+    // Track each site visit
     siteLinks.forEach(link => {
       link.addEventListener('click', () => {
-        setTimeout(() => {
-          continueBtn.style.display = 'inline-block';
-        }, 500);
+        const siteNum = link.dataset.site;
+        visitedSites.add(siteNum);
+
+        // If all 3 sites have been visited, allow continue
+        if (visitedSites.size === 3) {
+          allowContinue();
+        }
       });
     });
 
-    // When user clicks "Watch Video"
+    // Video option
     watchBtn.addEventListener('click', () => {
       watchBtn.disabled = true;
       watchBtn.textContent = "Playing...";
@@ -143,9 +146,17 @@
         if (countdown <= 0) {
           clearInterval(timer);
           timerDisplay.textContent = "You may now continue!";
-          continueBtn.style.display = 'inline-block';
+          videoCompleted = true;
+          allowContinue();
         }
       }, 1000);
+    }
+
+    // Show the Continue button if requirements are met
+    function allowContinue() {
+      if (visitedSites.size === 3 || videoCompleted) {
+        continueBtn.style.display = 'inline-block';
+      }
     }
   </script>
 </body>
