@@ -149,3 +149,53 @@ body {
   font-size: 1.2rem;
   color: #555;
 }
+/* --- SECTION TITLE with hover preview --- */
+.section-preview {
+  position: relative;
+  text-align: center;
+  margin: 140px auto 40px;     /* positions title below main heading */
+}
+
+.section-title {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.section-title:hover {
+  color: #ff7a00;              /* orange hover highlight */
+}
+
+/* --- DROPDOWN PREVIEW IMAGE --- */
+.section-image {
+  display: none;               /* hidden by default */
+  position: absolute;
+  top: 100%;                   /* directly below title */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  animation: dropDownSection 0.4s ease forwards;
+  z-index: 10;
+}
+
+/* show the image on hover */
+.section-preview:hover .section-image {
+  display: block;
+}
+
+/* --- DROP-DOWN ANIMATION --- */
+@keyframes dropDownSection {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+  }
+}
