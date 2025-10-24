@@ -153,7 +153,7 @@ body {
 .page-header {
   position: fixed;           /* stays at top even when scrolling */
   top: 20px;                 /* distance from top of the page */
-  left: 50%;                 /* center horizontally */
+  left: 100%;                 /* center horizontally */
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
