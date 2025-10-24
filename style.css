@@ -27,6 +27,22 @@ body {
   display: inline-block;
   text-align: center;
 }
+/* Center the entire title section at the top */
+.page-header {
+  position: relative;
+  width: 100%;
+  text-align: center;        /* centers the content horizontally */
+  margin-top: 20px;          /* small top spacing */
+}
+
+/* Optional: if you want it perfectly pinned to top */
+.page-header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
 
 .page-title {
   color: #fff;                /* white title */
