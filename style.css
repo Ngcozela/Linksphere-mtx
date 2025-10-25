@@ -136,7 +136,7 @@ body {
 .section-preview {
   position: relative;
   text-align: center;
-  margin-top: 160px;    /* adjust this number as needed */
+  margin-top: 10px auto 40px;    /* positions title below main heading */
 }
 
 .section-title {
