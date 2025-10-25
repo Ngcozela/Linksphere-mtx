@@ -208,7 +208,7 @@ body::before {
   transform: translateX(-50%);
   width: 90vw; /* spans 90% of the viewport width */
   height: 90vh; /* spans 90% of the viewport height */
-  background: url("images/melimtx-page-background.webp") center/contain no-repeat;
+  background: url("images/melimtx-page-background.webp") center/ no-repeat;
   opacity: 0.7;
   z-index: -1;
   pointer-events: none;
