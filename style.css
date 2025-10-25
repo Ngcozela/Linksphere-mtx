@@ -203,11 +203,11 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 50px;
+  top: 0;
   left: 0;
   width: 80%;
-  height: 40vh; /* spans 80% of the viewport height */
-  background: url("images/melimtx-page-background.webp") bottom center/cover no-repeat;
+  height: 70vh; /* spans 80% of the viewport height */
+  background: url("images/melimtx-page-background.webp") center/cover no-repeat;
   opacity: 0.3; /* 70% opacity */
   z-index: -1; /* keeps it behind everything else */
   pointer-events: none; /* allows clicking on content above */
