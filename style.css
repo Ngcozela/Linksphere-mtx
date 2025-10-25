@@ -13,8 +13,8 @@ body {
   padding: 20px;
 }
 
-/* Section Titles */
-.section-title {
+/* Page Titles */
+.page-title {
   font-size: 2.8rem;      /* bigger heading */
   color: #fff;            /* white text */
   text-align: center;
@@ -167,7 +167,7 @@ body {
 
 
 /* --- DROPDOWN PREVIEW IMAGE --- */
-.section-image {
+.title-image {
   display: none;               /* hidden by default */
   position: absolute;
   top: 100%;                   /* directly below title */
@@ -181,7 +181,7 @@ body {
 }
 
 /* show the image on hover */
-.section-preview:hover .section-image {
+.section-preview:hover .title-image {
   display: block;
 }
 
